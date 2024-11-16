@@ -31,13 +31,12 @@ public class Main {
             System.out.println("Enter the length of the third side (sideC):");
             sideC_x = read.nextDouble();
 
-            // Verificação da condição para formar um triângulo
             if (sideA_x + sideB_x > sideC_x && sideA_x + sideC_x > sideB_x && sideB_x + sideC_x > sideA_x) {
                 System.out.println("The values can form a triangle!");
-                double semiPerimetroX = (sideA_x + sideB_x + sideC_x)/2;
-                triangleAreaX = Math.sqrt( semiPerimetroX * (semiPerimetroX - sideA_x) * (semiPerimetroX - sideB_x) * (semiPerimetroX - sideC_x));
+                double semiperimeterX = (sideA_x + sideB_x + sideC_x)/2;
+                triangleAreaX = Math.sqrt( semiperimeterX * (semiperimeterX - sideA_x) * (semiperimeterX - sideB_x) * (semiperimeterX - sideC_x));
                 System.out.println(String.format("Area X: %.2f", triangleAreaX));
-                break; // Sai do loop, pois os valores são válidos
+                break;
             } else {
                 System.out.println("The values cannot form a triangle. Please try again.");
             }
@@ -55,13 +54,12 @@ public class Main {
             System.out.println("Enter the length of the third side (sideC):");
             sideC_y = read.nextDouble();
 
-            // Verificação da condição para formar um triângulo
             if (sideA_y + sideB_y > sideC_y && sideA_y + sideC_y > sideB_y && sideB_y + sideC_y > sideA_y) {
                 System.out.println("The values can form a triangle!");
-                double semiPerimetroY = (sideA_y + sideB_y + sideC_y)/2;
-                triangleAreaY = Math.sqrt(semiPerimetroY * (semiPerimetroY - sideA_y) * (semiPerimetroY - sideB_y) * (semiPerimetroY - sideC_y));
+                double semiperimeterY = (sideA_y + sideB_y + sideC_y)/2;
+                triangleAreaY = Math.sqrt(semiperimeterY * (semiperimeterY - sideA_y) * (semiperimeterY - sideB_y) * (semiperimeterY - sideC_y));
                 System.out.println(String.format("Area Y: %.2f", triangleAreaY));
-                break; // Sai do loop, pois os valores são válidos
+                break;
             } else {
                 System.out.println("The values cannot form a triangle. Please try again.");
             }
